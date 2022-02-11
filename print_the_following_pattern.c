@@ -3,15 +3,14 @@ int main()
 {
     int a, b, c;
     scanf("%d", &a);
-    for(b=a; b>=1; b--)
+    for(b=1; b<=a; b++)
     {
-        for(c=a; c>=1; c--)
+        for(c=1; c<=b; c++)
         {
-            printf("%d ", c);
+            printf("%d", c);
         }
         printf("
 ");
-        
     }
-	return 0;
+    return 0;
 }
