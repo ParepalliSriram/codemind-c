@@ -2,15 +2,22 @@
 int main()
 {
     int r,c;
-    scanf("%d %d",&r,&c);
-    int i,j,k=0,l,arr[100][100],co=0;
+    scanf("%d%d",&r,&c);
+    int i,j,k,arr[r][c];
     for(i=0;i<r;i++)
     {
-        for(l=0;l<c;l++)
+        for(k=0;k<c;k++)
         {
-            scanf("%d",&arr[i][l]);
-            co+=arr[i][l];
+            scanf("%d",&arr[i][k]);
         }
     }
-    printf("%d",co);
+    int ev=0,od=0;
+    for(i=0;i<r;i++)
+    {
+        for(k=0;k<c;k++)
+        {
+            od+=arr[i][k];
+        }
+    }
+    printf("%d",od);
 }
