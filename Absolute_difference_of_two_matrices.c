@@ -2,45 +2,34 @@
 #include<math.h>
 int main()
 {
-    int r,c;
-    scanf("%d",&r);
-    int i,j,k=0,l,arr[100][100],brr[100][100],co=0,ar2[100],m=0,n=0;
-    for(i=0;i<r;i++)
+    int n;
+    scanf("%d",&n);
+    int i,j,k,l,arr[n][n],ar2[n][n];
+    for(i=0;i<n;i++)
     {
-        for(l=0;l<r;l++)
+        for(k=0;k<n;k++)
         {
-            scanf("%d",&arr[i][l]);
-            co+=arr[i][l];
+            scanf("%d",&arr[i][k]);
         }
     }
-    for(i=0;i<r;i++)
+    for(i=0;i<n;i++)
     {
-        for(l=0;l<r;l++)
+        for(k=0;k<n;k++)
         {
-            scanf("%d",&brr[i][l]);
+            scanf("%d",&ar2[i][k]);
         }
     }
-    for(i=0;i<r;i++)
+    for(i=0;i<n;i++)
     {
-        for(l=0;l<r;l++)
+        for(k=0;k<n;k++)
         {
-            ar2[m++]=abs(arr[i][l]-brr[i][l]);
+            printf("%d",abs(arr[i][k]-ar2[i][k]));
+            if(k!=n-1)
+            {
+                printf(" ");
+            }
         }
-    }
-    int count=0;
-    for(l=0;l<m;l++)
-    {
-        printf("%d",ar2[l]);
-        count+=1;
-        if(count==r)
-        {
-            printf("
+        printf("
 ");
-            count=0;
-        }
-        else
-        {
-            printf(" ");
-        }
     }
 }
