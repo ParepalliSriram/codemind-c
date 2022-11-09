@@ -1,23 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int r,c;
-    scanf("%d %d",&r,&c);
-    int i,j,k=0,l,arr[100][100],co=0,ar2[100];
-    for(i=0;i<r;i++)
+    int n,m;
+    scanf("%d%d",&n,&m);
+    int i,j,k,l,r=0,c=0,arr[n][m],arrr[100];
+    for(i=0;i<n;i++)
     {
-        for(l=0;l<c;l++)
+        for(k=0;k<m;k++)
         {
-            scanf("%d",&arr[i][l]);
+            scanf("%d",&arr[i][k]);
         }
     }
-    for(i=0;i<c;i++)
+    for(i=0;i<m;i++)
     {
-        for(l=0;l<r;l++)
+        for(k=0;k<n;k++)
         {
-        	co+=arr[l][i];
+            r+=arr[k][i];
         }
-        printf("%d ",co);
-        co=0;
+        printf("%d ",r);
+        r=0;
     }
+    
 }
